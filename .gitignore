@@ -1,6 +1,29 @@
 node_modules
 /src
 /_proto
+demo/talking-avatar/.vs
 webpack.config.js
 tsconfig.json
 package-lock.json
+
+# dependencies
+demo/talking-avatar/node_modules
+demo/talking-avatar/.pnp
+.pnp.js
+
+# testing
+demo/talking-avatar/coverage
+
+# production
+demo/talking-avatar/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

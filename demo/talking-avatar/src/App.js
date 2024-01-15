@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Canvas } from '@react-three/fiber'
 import { Environment, OrbitControls, Html } from '@react-three/drei'
-import { Model } from "./Constantine";
+import { Model } from "./Constantine_anim";
 import { ConvaiClient } from 'convai-web-sdk';
 import { SETTINGS } from './constants';
 
@@ -81,8 +81,11 @@ export default function App() {
 
   return (
     <Canvas shadows camera={{ position: [0, 0, 15], fov: 30 }}>
-      <Environment files="/studio.hdr" ground={{ height: 5, radius: 30, scale: 20 }} />
-      <Model position={[0, 0, 3]} scale={1.8} animationName={isTalking ? "talk" : "idle"} />
+
+      <Environment files="/backdrops/environments/Exterior/Roads/RenoSuburb01_sm.hdr" ground={{ height: 5, radius: 30, scale: 20 }} />
+
+
+      <Model position={[0, 0, 3]} scale={1.8} animationName={isTalking ? "Talking1" : "idle1"} />
       <Html position={[-1.5, -0.75, 3]}>
         {userText && (<div style={{
           width: '100%', height: '100%', overflow: 'auto', borderRadius: '10px',
@@ -103,4 +106,3 @@ export default function App() {
     </Canvas>
   );
 }
-
